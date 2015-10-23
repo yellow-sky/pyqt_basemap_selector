@@ -36,6 +36,9 @@ class DropdownBaseMapSelector(QComboBox):
         else:
             raise IndexError('Basemap with id "%s" not found!' % str(basemap_id))
 
+    def current_basemap(self):
+        return self.itemData(self.currentIndex())
+
     #def resizeEvent(self, e):
     #    self.setIconSize(QSize(self.size().width()/2, self.size().height()-10))
     #    QComboBox.resizeEvent(self, e)
